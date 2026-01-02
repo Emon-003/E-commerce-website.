@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Us - Blyynx. Get in touch with our customer service team.">
+    <title>Contact Us - Blyynx</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <h1>Blyynx</h1>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="cart-icon">
+                        <a href="cart.html" aria-label="Shopping cart">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container" style="padding: 4rem 0;">
+            <h1 class="page-title" style="text-align: center; margin-bottom: 3rem;">Contact Us</h1>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1000px; margin: 0 auto;">
+                <div class="info-section-card" style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: var(--shadow);">
+                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Get in Touch</h2>
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--text-color); margin-bottom: 0.5rem; font-size: 1.1rem;">📧 Email</h3>
+                        <p style="color: var(--text-light); line-height: 1.8;">
+                            <a href="mailto:support@Blyynx.com" style="color: var(--primary-color); text-decoration: none;">support@Blyynx.com</a>
+                        </p>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--text-color); margin-bottom: 0.5rem; font-size: 1.1rem;">📞 Phone</h3>
+                        <p style="color: var(--text-light); line-height: 1.8;">
+                            <a href="tel:18001234567" style="color: var(--primary-color); text-decoration: none;">1-800-1234567</a><br>
+                            Available 24/7
+                        </p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--text-color); margin-bottom: 0.5rem; font-size: 1.1rem;">📍 Address</h3>
+                        <p style="color: var(--text-light); line-height: 1.8;">
+                            <a href="https://maps.google.com/?q=123+Commerce+St+Business+City+BC+12345" target="_blank" style="color: var(--primary-color); text-decoration: none;">123 Commerce St<br>Business City, BC 12345</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-section-card" style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: var(--shadow);">
+                    <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Send us a Message</h2>
+                    <form id="contactForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div class="form-group">
+                            <label for="contactName" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-color);">Name</label>
+                            <input type="text" id="contactName" name="name" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.5rem; font-size: 1rem;">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-color);">Email</label>
+                            <input type="email" id="contactEmail" name="email" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.5rem; font-size: 1rem;">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-color);">Message</label>
+                            <textarea id="contactMessage" name="message" rows="5" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.5rem; font-size: 1rem; font-family: inherit;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Blyynx</h3>
+                    <p>Your trusted destination for premium products. Quality, service, and satisfaction guaranteed.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="footer-link">📘</a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="footer-link">🐦</a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="footer-link">📷</a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="footer-link">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="index.html#products" class="footer-link">Products</a></li>
+                        <li><a href="index.html#about" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="shipping.html" class="footer-link">Shipping Info</a></li>
+                        <li><a href="returns.html" class="footer-link">Returns</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="track.html" class="footer-link">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:support@Blyynx.com" class="footer-link">📧 support@Blyynx.com</a></li>
+                        <li><a href="tel:18001234567" class="footer-link">📞 1-800-1234567</a></li>
+                        <li><a href="https://maps.google.com/?q=123+Commerce+St+Business+City+BC+12345" target="_blank" class="footer-link">📍 123 Commerce St, Business City, BC 12345</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Blyynx. All rights reserved. | <a href="privacy.html" class="footer-link">Privacy Policy</a> | <a href="terms.html" class="footer-link">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! Our team will get back to you within 24 hours.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+
