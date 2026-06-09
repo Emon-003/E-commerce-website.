@@ -208,6 +208,5 @@ function showFormError(message) {
     setTimeout(() => {
         errorDiv.remove();
     }, 5000);
-    }
-});
+}
 

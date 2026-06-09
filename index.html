@@ -34,6 +34,30 @@
                             <path d="m21 21-4.35-4.35"></path>
                         </svg>
                     </div>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </button>
+                    <div class="wishlist-icon">
+                        <a href="wishlist.html" aria-label="Wishlist">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            <span class="wishlist-count" id="wishlistCount">0</span>
+                        </a>
+                    </div>
                     <div class="cart-icon">
                         <a href="cart.html" aria-label="Shopping cart">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -56,35 +80,48 @@
     
     <main>
         <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Welcome to Blyynx</h1>
-                <p class="hero-subtitle">Discover premium products at unbeatable prices. Fast shipping, secure checkout, and exceptional service.</p>
-                <div class="hero-features">
-                    <div class="feature-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 7h-9"></path>
-                            <path d="M14 17H5"></path>
-                            <circle cx="17" cy="17" r="3"></circle>
-                            <circle cx="7" cy="7" r="3"></circle>
-                        </svg>
-                        <span>Free Shipping</span>
+            <div class="hero-container">
+                <div class="hero-left">
+                    <h1 class="hero-title">Next Generation Tech Store</h1>
+                    <p class="hero-subtitle">Discover Premium Electronics Designed For Modern Living.</p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary btn-large">Shop Now</a>
+                        <a href="#products" class="btn btn-secondary btn-large">Explore Products</a>
                     </div>
-                    <div class="feature-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                        </svg>
-                        <span>Secure Payment</span>
-                    </div>
-                    <div class="feature-item">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                        </svg>
-                        <span>30-Day Returns</span>
+                    <div class="hero-trust">
+                        <div class="trust-item">
+                            <svg class="trust-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span class="trust-text">Premium Quality</span>
+                        </div>
+                        <div class="trust-item">
+                            <svg class="trust-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 7h-9"></path>
+                                <path d="M14 17H5"></path>
+                                <circle cx="17" cy="17" r="3"></circle>
+                                <circle cx="7" cy="7" r="3"></circle>
+                            </svg>
+                            <span class="trust-text">Fast Delivery</span>
+                        </div>
+                        <div class="trust-item">
+                            <svg class="trust-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <span class="trust-text">Secure Checkout</span>
+                        </div>
                     </div>
                 </div>
-                <a href="#products" class="btn btn-primary btn-large">Shop Now</a>
+                <div class="hero-right">
+                    <div class="hero-mockup">
+                        <div class="mockup-laptop">💻</div>
+                        <div class="mockup-phone">📱</div>
+                        <div class="mockup-watch">⌚</div>
+                        <div class="mockup-headphones">🎧</div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -96,6 +133,25 @@
                 </div>
                 <div class="filter-bar">
                     <div class="filter-group">
+                        <label>Category:</label>
+                        <select id="categorySelect" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="Audio">Audio</option>
+                            <option value="Wearables">Wearables</option>
+                            <option value="Desk Accessories">Desk Accessories</option>
+                            <option value="Connectivity">Connectivity</option>
+                            <option value="Computing">Computing</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Price Range:</label>
+                        <div class="price-filter">
+                            <input type="number" id="minPrice" class="filter-input" placeholder="Min">
+                            <span class="price-separator">-</span>
+                            <input type="number" id="maxPrice" class="filter-input" placeholder="Max">
+                        </div>
+                    </div>
+                    <div class="filter-group">
                         <label>Sort by:</label>
                         <select id="sortSelect" class="filter-select">
                             <option value="default">Default</option>
@@ -104,6 +160,7 @@
                             <option value="name">Name: A to Z</option>
                         </select>
                     </div>
+                    <button class="btn btn-secondary" id="clearFiltersBtn">Clear Filters</button>
                     <div class="results-count" id="resultsCount"></div>
                 </div>
                 <div class="products-grid" id="productsGrid">
@@ -149,12 +206,18 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Blyynx</h3>
-                    <p>Your trusted destination for premium products. Quality, service, and satisfaction guaranteed.</p>
+                    <p>Your trusted destination for premium electronics and tech products. Quality, service, and satisfaction guaranteed.</p>
                     <div class="social-links">
                         <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="footer-link">📘</a>
                         <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="footer-link">🐦</a>
                         <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="footer-link">📷</a>
                         <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="footer-link">💼</a>
+                    </div>
+                    <div class="payment-methods">
+                        <div class="payment-icon">VISA</div>
+                        <div class="payment-icon">MC</div>
+                        <div class="payment-icon">AMEX</div>
+                        <div class="payment-icon">PP</div>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -176,16 +239,30 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="mailto:support@Blyynx.com" class="footer-link">📧 support@Blyynx.com</a></li>
-                        <li><a href="tel:18001234567" class="footer-link">📞 1-800-1234567</a></li>
-                        <li><a href="https://maps.google.com/?q=123+Commerce+St+Business+City+BC+12345" target="_blank" class="footer-link">📍 123 Commerce St, Business City, BC 12345</a></li>
-                    </ul>
+                    <h4>Contact Us</h4>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span class="contact-text">123 Commerce St<br>Business City, BC 12345</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span class="contact-text"><a href="mailto:support@blyynx.com" class="footer-link">support@blyynx.com</a></span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span class="contact-text"><a href="tel:18001234567" class="footer-link">1-800-123-4567</a></span>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Blyynx. All rights reserved. | <a href="privacy.html" class="footer-link">Privacy Policy</a> | <a href="terms.html" class="footer-link">Terms of Service</a></p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Blyynx. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

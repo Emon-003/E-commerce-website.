@@ -26,6 +26,37 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="nav-actions">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </button>
+                    <div class="wishlist-icon">
+                        <a href="wishlist.html" aria-label="Wishlist">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            <span class="wishlist-count" id="wishlistCount">0</span>
+                        </a>
+                    </div>
                     <div class="cart-icon">
                         <a href="cart.html" aria-label="Shopping cart">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -37,6 +68,11 @@
                         </a>
                     </div>
                 </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
     </header>
@@ -46,14 +82,14 @@
             <h1 class="page-title" style="text-align: center; margin-bottom: 3rem;">Shipping Information</h1>
             
             <div class="info-content" style="max-width: 800px; margin: 0 auto;">
-                <div class="info-section-card" style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: var(--shadow); margin-bottom: 2rem;">
+                <div class="info-section-card">
                     <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Free Shipping</h2>
                     <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1.5rem;">
                         We offer free standard shipping on all orders over $50. This applies to all destinations within the United States.
                     </p>
                 </div>
 
-                <div class="info-section-card" style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: var(--shadow); margin-bottom: 2rem;">
+                <div class="info-section-card">
                     <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Standard Shipping</h2>
                     <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
                         Standard shipping typically takes 5-7 business days from the date your order is processed. Orders are processed within 1-2 business days after payment confirmation.
@@ -63,7 +99,7 @@
                     </p>
                 </div>
 
-                <div class="info-section-card" style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: var(--shadow); margin-bottom: 2rem;">
+                <div class="info-section-card">
                     <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Express Shipping</h2>
                     <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
                         Need your items faster? Choose express shipping at checkout for delivery within 2-3 business days.
@@ -73,7 +109,7 @@
                     </p>
                 </div>
 
-                <div class="info-section-card" style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: var(--shadow); margin-bottom: 2rem;">
+                <div class="info-section-card">
                     <h2 style="color: var(--primary-color); margin-bottom: 1rem;">International Shipping</h2>
                     <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1rem;">
                         We currently ship to select international destinations. Shipping times and costs vary by location. Please contact us for more information about shipping to your country.
@@ -83,7 +119,7 @@
                     </p>
                 </div>
 
-                <div class="info-section-card" style="background: white; padding: 2rem; border-radius: 0.75rem; box-shadow: var(--shadow);">
+                <div class="info-section-card">
                     <h2 style="color: var(--primary-color); margin-bottom: 1rem;">Tracking Your Order</h2>
                     <p style="color: var(--text-light); line-height: 1.8;">
                         Once your order ships, you'll receive a tracking number via email. You can use this number to track your package's journey to your doorstep. Visit our <a href="track.html" style="color: var(--primary-color); text-decoration: none;">Track Your Order</a> page to check your shipment status.
@@ -98,12 +134,18 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Blyynx</h3>
-                    <p>Your trusted destination for premium products. Quality, service, and satisfaction guaranteed.</p>
+                    <p>Your trusted destination for premium electronics and tech products. Quality, service, and satisfaction guaranteed.</p>
                     <div class="social-links">
                         <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="footer-link">📘</a>
                         <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="footer-link">🐦</a>
                         <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="footer-link">📷</a>
                         <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="footer-link">💼</a>
+                    </div>
+                    <div class="payment-methods">
+                        <div class="payment-icon">VISA</div>
+                        <div class="payment-icon">MC</div>
+                        <div class="payment-icon">AMEX</div>
+                        <div class="payment-icon">PP</div>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -125,16 +167,30 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="mailto:support@Blyynx.com" class="footer-link">📧 support@Blyynx.com</a></li>
-                        <li><a href="tel:18001234567" class="footer-link">📞 1-800-1234567</a></li>
-                        <li><a href="https://maps.google.com/?q=123+Commerce+St+Business+City+BC+12345" target="_blank" class="footer-link">📍 123 Commerce St, Business City, BC 12345</a></li>
-                    </ul>
+                    <h4>Contact Us</h4>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span class="contact-text">123 Commerce St<br>Business City, BC 12345</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span class="contact-text"><a href="mailto:support@blyynx.com" class="footer-link">support@blyynx.com</a></span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span class="contact-text"><a href="tel:18001234567" class="footer-link">1-800-123-4567</a></span>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Blyynx. All rights reserved. | <a href="privacy.html" class="footer-link">Privacy Policy</a> | <a href="terms.html" class="footer-link">Terms of Service</a></p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Blyynx. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

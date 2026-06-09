@@ -1,6 +1,6 @@
 // Display cart items
 function displayCart() {
-    const cartItems = document.getElementById('cartItems');
+    const cartItemsList = document.getElementById('cartItemsList');
     const emptyCart = document.getElementById('emptyCart');
     const cartSummary = document.getElementById('cartSummary');
     const cart = getCart();
@@ -8,20 +8,21 @@ function displayCart() {
     if (cart.length === 0) {
         emptyCart.style.display = 'block';
         cartSummary.style.display = 'none';
-        cartItems.innerHTML = '';
-        cartItems.appendChild(emptyCart);
+        cartItemsList.innerHTML = '';
         return;
     }
 
     emptyCart.style.display = 'none';
     cartSummary.style.display = 'block';
-    cartItems.innerHTML = '';
+    cartItemsList.innerHTML = '';
 
     cart.forEach(item => {
         const cartItem = document.createElement('div');
         cartItem.className = 'cart-item';
         cartItem.innerHTML = `
-            <div class="cart-item-image">${item.image}</div>
+            <div class="cart-item-image">
+                <img src="${item.image}" alt="${item.name}" />
+            </div>
             <div class="cart-item-details">
                 <h3 class="cart-item-name">${item.name}</h3>
                 <div class="cart-item-price">$${item.price.toFixed(2)}</div>
@@ -33,7 +34,7 @@ function displayCart() {
                 <button class="remove-btn" onclick="removeFromCart(${item.id})">Remove</button>
             </div>
         `;
-        cartItems.appendChild(cartItem);
+        cartItemsList.appendChild(cartItem);
     });
 
     updateCartSummary();
